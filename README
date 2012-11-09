@@ -1,4 +1,4 @@
-Module that switches off the ATI radeon card on Acer Aspire TimelineX 3820TG. Adopted from the original module for Lenovo laptops by Sylvain Joyeux.
+Module that switches off the ATI radeon card on Acer Aspire TimelineX 3820TG. Based on the original module for Lenovo laptops by Sylvain Joyeux and on this post by f4lkon: http://ubuntuforums.org/showthread.php?t=1242590&page=9.
 
 To install:
 
