@@ -1,0 +1,9 @@
+To install:
+
+# dkms add -m lenovo_acpi -v 0.1
+# dkms build -m lenovo_acpi -v 0.1
+# dkms install -m lenovo_acpi -v 0.1
+
+Then add to /etc/modules (Debian/Ubuntu etc.) or /etc/modules.conf (Red Hat/Fedora/CentOS etc.) for auto-loading, or just run
+
+# modprobe lenovo_acpi
