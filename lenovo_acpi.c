@@ -23,7 +23,7 @@ static int __init kill_ati(void)
     // For the return value of ATPX
     struct acpi_buffer buffer = { ACPI_ALLOCATE_BUFFER, NULL };
 
-    status = acpi_get_handle(root_handle, "\\_SB_.PCI0.OVGA.ATPX", &handle);
+    status = acpi_get_handle(root_handle, "\\_SB.PCI0.P0P2.PEGP._OFF", &handle);
     if (ACPI_FAILURE(status))
     {
         status = acpi_get_handle(root_handle, "\\_SB_.PCI0.OVGA.XTPX", &handle);
@@ -42,7 +42,7 @@ static int __init kill_ati(void)
         package_elements[i].integer.value = 0;
     }
 
-    atpx_arg.count = 2;
+    atpx_arg.count = 0;
     atpx_arg.pointer = &atpx_arg_elements[0];
 
     atpx_arg_elements[0].type = ACPI_TYPE_INTEGER;
@@ -70,5 +70,3 @@ static void dummy(void)
 
 module_init(kill_ati);
 module_exit(dummy);
-
-
