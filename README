@@ -1,11 +1,17 @@
 Module that switches off the ATI radeon card on Acer Aspire TimelineX 3820TG. Based on the original module for Lenovo laptops by Sylvain Joyeux and on this post by f4lkon: http://ubuntuforums.org/showthread.php?t=1242590&page=9.
 
-To install:
+To install with DKMS:
 
+# cp -R lenovo_acpi /usr/src/lenovo_acpi-0.1
 # dkms add -m lenovo_acpi -v 0.1
 # dkms build -m lenovo_acpi -v 0.1
 # dkms install -m lenovo_acpi -v 0.1
 
-Then add lenovo_acpi to /etc/modules (Debian/Ubuntu etc.) or /etc/modules.conf (Red Hat/Fedora/CentOS etc.) for auto-loading, or just run:
+To install without DKMS:
+
+# make
+# make install
+
+Then add lenovo_acpi to /etc/modules (Debian/Ubuntu etc.) or /etc/modules.conf (Red Hat/Fedora/CentOS etc.) for auto-loading. For one-time loading just run:
 
 # modprobe lenovo_acpi
