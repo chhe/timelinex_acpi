@@ -3,6 +3,8 @@
  *
  * Copyright (c) 2009: Sylvain Joyeux <sylvain.joyeux@m4x.org>
  */
+#include <linux/module.h>
+#include <linux/kernel.h>
 #include <acpi/acpi.h>
 
 MODULE_LICENSE("GPL");
